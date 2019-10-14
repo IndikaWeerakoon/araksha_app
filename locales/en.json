@@ -1,0 +1,54 @@
+{
+    "front_page":{
+        "title":"Araksha"
+    },
+    "auth":{
+        "login":{
+            "email":"Email",
+            "password":"Password",
+            "keep_login":"Keep me logged in",
+            "login":"LOGIN",
+            "password_forget":"Forget Your Password",
+            "lang":{
+                "en":"English",
+                "si":"සිංහල",
+                "ta":"தமிழ்"
+            }
+        },
+        "sign_up":{
+
+        }
+    },
+    "component":{
+        "drawer":{
+            "map":"Map",
+            "route":"Route",
+            "history":"History",
+            "profile":"Profile"
+        },
+        "header":{
+
+        }
+    },
+    "screen":{
+        "map":{
+
+        },
+        "route":{
+
+        },
+        "history":{
+
+        },
+        "profile":{
+            "prof_name":"profile name",
+            "vehicle_no":"Vehical No",
+            "license_no":"License No",
+            "reg_no":"Reg No",
+            "nic":"NIC No",
+            "address":"Address",
+            "tel_no":"Tel No",
+            "new_tel_no": "new number"
+        }
+    }
+}

@@ -6,6 +6,7 @@ import {
     StyleSheet
 } from 'react-native';
 import {Header, Left, Icon, Body, Right, Title}  from 'native-base'
+import color from '../../assets/color';
 // import from 'react-native-options-menu'
 export default class HeaderMain extends Component{
     constructor(props){
@@ -23,6 +24,7 @@ export default class HeaderMain extends Component{
                     <Title style={{color:"#fff"}}>{this.props.title}</Title>
                 </Body>
                 <Right>
+
                     {moreIcon}
                 </Right>
             </Header>
@@ -32,7 +34,7 @@ export default class HeaderMain extends Component{
 
 const styles = StyleSheet.create({
     header:{
-        backgroundColor:"#209590",
+        backgroundColor:color.green,
 
     },
     menuIcon:{

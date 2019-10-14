@@ -8,17 +8,25 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "add": "^2.0.6",
+    "i18n-js": "^3.3.0",
+    "i18next": "^17.0.16",
     "native-base": "^2.13.8",
     "react": "16.8.6",
+    "react-i18next": "^10.12.5",
     "react-native": "0.60.5",
+    "react-native-elements": "^1.2.1",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-maps": "0.25.0",
     "react-native-options-menu": "^2.0.2",
     "react-native-reanimated": "^1.2.0",
+    "react-native-restart": "0.0.13",
     "react-native-screens": "^2.0.0-alpha.3",
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.4",
-    "react-navigation-drawer": "^2.2.1"
+    "react-navigation-drawer": "^2.2.1",
+    "realm": "^3.0.0",
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

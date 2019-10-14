@@ -2,28 +2,67 @@ import React, {Component} from 'react';
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    Dimensions
 } from 'react-native';
 import HeaderMain from '../components/header';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
 
+const{width,height} = Dimensions.get('window');
+const WIDTH = width;
+const HEIGHT = height;
 
 export default class MapScreen extends Component{
+    constructor(){
+        super();
+        this.state = {
+            region:{
+                latitude: 6.889363,
+                longitude:  79.905140,
+                latitudeDelta: 0.10,
+                longitudeDelta: 0.08,
+            },
+            markers:[],
+        }
+        this.onRegionChange = this.onRegionChange.bind(this);
+        this.handleMarker = this.handleMarker.bind(this);
+    }
+    
+    handleMarker(e){
+        console.log(e)
+        // this.setState(
+        //     {markers:[
+        //          ...this.state.markers,
+        //         {
+        //             coordinate:event.nativeEvent.coordinate,
+        //         }
+        //     ]}
+        // )
+    }
+
+    onRegionChange(region) {
+        this.setState({ region });
+        
+      }
+
     render(){
         return(
-            <View style={styles.container}>
-                <HeaderMain title="Maps" navigator={this.props.navigation} />
-                <MapView
-                provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-                style={styles.map}
-                region={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121,
-                }}
-                >
-                </MapView>
+            
+
+            <View >
+                <HeaderMain title="Maps"  navigator={this.props.navigation} />
+                <View style={styles.container}>
+                    <MapView
+                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        style={styles.map}
+                        region={this.state.region}
+                        onPress={this.handleMarker}
+                    >
+                        {this.state.markers.map((marker)=>{
+                            <Marker {...marker}/>
+                        })}
+                    </MapView>
+            </View>
             </View>
         );
     }
@@ -31,9 +70,8 @@ export default class MapScreen extends Component{
 
 const styles = StyleSheet.create({
     container: {
-      ...StyleSheet.absoluteFillObject,
-      height: 400,
-      width: 400,
+      height: HEIGHT,
+      width: WIDTH,
       justifyContent: 'flex-end',
       alignItems: 'center',
     },

@@ -194,6 +194,15 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
+    implementation project(':realm')
+    implementation project(':react-native-restart')
+
+    implementation(project(':react-native-maps')){
+       exclude group: 'com.google.android.gms', module: 'play-services-base'
+       exclude group: 'com.google.android.gms', module: 'play-services-maps'
+   }
+   implementation 'com.google.android.gms:play-services-base:10.0.1'
+   implementation 'com.google.android.gms:play-services-maps:10.0.1'
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

@@ -1,0 +1,54 @@
+{
+    "front_page":{
+        "title":"ආරක්ෂා"
+    },
+    "auth":{
+        "login":{
+            "email":"විද්යුත් තැපෑල",
+            "password":"මුරපදය",
+            "keep_login":"මාව මතකයේ  තබා ගන්න",
+            "login":"ඇතුල් වන්න",
+            "password_forget":"ඔබගේ මුරපදය අමතකද ?",
+            "lang":{
+                "en":"English",
+                "si":"සිංහල",
+                "ta":"தமிழ்"
+            }
+        },
+        "sign_up":{
+
+        }
+    },
+    "component":{
+        "drawer":{
+            "map":"සිතියම",
+            "route":"මාර්ගය",
+            "history":"ඉතිහාසය",
+            "profile":"පැතිකඩ"
+        },
+        "header":{
+
+        }
+    },
+    "screen":{
+        "map":{
+
+        },
+        "route":{
+
+        },
+        "history":{
+
+        },
+        "profile":{
+            "prof_name":"රියදුරු නම",
+            "vehicle_no":"වාහන අංකය",
+            "license_no":"බලපත්‍ර අංකය",
+            "reg_no":"ලියාපදිංචි අංකය",
+            "nic":"ජා.හැ අංකය",
+            "address":"ලිපිනය",
+            "tel_no":"දුරකථන අංක",
+            "new_tel_no": "නව අංකය"
+        }
+    }
+}
